@@ -1,3 +1,3 @@
-# stack.js
+Introductory GIS presentation.
 
-A presentation library with intuitive, scroll-based navigation.
+Created with Stack.js
