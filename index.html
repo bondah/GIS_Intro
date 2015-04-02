@@ -32,76 +32,123 @@ a:hover {
 
 </style>
 
-<section style="text-align:center;padding-top:5em;">
-  <p style="font-size:120%;"><b><a href="https://github.com/mbostock/stack">Stack</a></b> is a presentation library<br> with simple, scroll-based navigation.
-  <p class="grey">Scroll down to continue.
+<section style="text-align:center;padding-top:2em;font-size:300%;">
+  GIS Introduction
 </section>
 
 <section style="padding:5em 9em;">
-  <p>In addition to the mouse,
-    <br>you can scroll with the keyboard:
-    <br>use the <b>arrow keys</b>,
-    <br>the <b>space bar</b>,
-    <br>or <b>page up</b> and <b>page down</b>.
-  <p class="grey">Multiple key presses will skip multiple slides.
+  <h1 style="text-align:center;font-size:200%">Install QGIS</h1>
+  <p>
+  <b><a href="http://www.qgis.org/en/site/">Download QGIS 2.8</a></b>
 </section>
 
-<section style="text-align:center;padding-top:5em;">
-  <p>You can even grab the scroll bar!
+<section style="text-align:center;padding-top:2em;font-size:300%">
+  Resources
 </section>
 
-<section style="text-align:center;padding:.35em;font-size:1000%;">
-  9
+<section style="padding:5em 9em;">
+  <h1 style="text-align:center;font-size:200%">Local Resources</h1>
+  <p>
+  <b><a href="http://egis3.lacounty.gov/dataportal/">LA County</a></b> <a class="grey">(also includes data from City of LA)</a>
+  <br>
+  <b><a href="https://ocdata.giscloud.com/">Orange County</a></b>
+  <br>
+  <b><a href="http://www.fs.usda.gov/detail/r5/landmanagement/gis/?cid=STELPRDB5327833">Forest Service Region 5</a></b>
 </section>
 
-<section style="text-align:center;padding:.35em;font-size:1000%;">
-  8
+<section style="padding:5em 9em;">
+  <h1 style="text-align:center;font-size:200%">State Resources</h1>
+  <p>
+  <b><a href="http://portal.gis.ca.gov/geoportal/catalog/main/home.page">State of California GeoPortal</a></b>
+  <br>
+  <b><a href="http://www.dot.ca.gov/hq/tsip/gis/datalibrary/">CalTrans</a></b>
 </section>
 
-<section style="text-align:center;padding:.35em;font-size:1000%;">
-  7
+<section style="padding:5em 9em;">
+  <h1 style="text-align:center;font-size:200%">Federal Resources</h1>
+  <p>
+  <b><a href="https://www.census.gov/geo/maps-data/data/tiger.html">Census</a></b>
+  <br>
+  <b><a href="http://www.fws.gov/gis/data/national/">Ecology</a></b>
+  <br>
+  <b><a href="http://www.nws.noaa.gov/gis/shapepage.html">Weather</a></b>
+  <br>
+  <b><a href="http://nationalmap.gov/viewer.html">USGS and more</a></b> <a class="grey">(hydrography, topo, hazards)</a>
+  <br>
+  <b><a href="http://earthexplorer.usgs.gov/">Remote Sensing and LiDAR</a></b>
 </section>
 
-<section style="text-align:center;padding:.35em;font-size:1000%;">
-  6
+<section style="text-align:center;padding-top:2em;font-size:300%">
+  Adding Data Demo
 </section>
 
-<section style="text-align:center;padding:.35em;font-size:1000%;">
-  5
+<section style="padding:2em 9em;">
+  <h1 style="text-align:center;font-size:100%">Lets add some data...</h1>
+  <ol style="font-size:100%">
+  <li><b><a href="http://egis3.lacounty.gov/dataportal/wp-content/uploads/ShapefilePackages/DPW_COUNTY_BOUNDARY.zip">LA County Boundary</a></b></li>
+  <li><b><a href="http://egis3.lacounty.gov/dataportal/2012/11/13/national-forest/drp_forest/">National Forest</a></b></li>
+  <li><b><a href="http://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5332131.zip">Pacific Crest Trail</a></b></li>
+  <li><b><a href="http://data.fs.usda.gov/geodata/edw/edw_resources/shp/S_USA.Wilderness.zip">Wilderness Area</a></b></li>
+  <li><b><a href="http://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5333752.zip">Recommended Wilderness Area</a></b></li>
 </section>
 
-<section style="text-align:center;padding:.35em;font-size:1000%;">
-  4
+<section style="padding:2em 9em;">
+  <h1 style="text-align:center;font-size:100%">Basemaps!</h1>
+  <p>
+  <ol>
+  <li>Go to Plugins > Manage and Install Plugins</li>
+  <br>
+  <li>Install OpenLayers Plugin</li>
+  <br>
+  <li>Go to Web > OpenLayers Plugin and pick a basemap</li>
 </section>
 
-<section style="text-align:center;padding:.35em;font-size:1000%;">
-  3
+<section style="padding:2em 2em;">
+  <h1 style="text-align:center;font-size:100%">If you have trouble opening mdb files...</h1>
+  <ol style="font-size:75%">
+  <li><b><a href="http://www.microsoft.com/en-gb/download/details.aspx?id=13255">Download the 64-bit version of the ODBC driver</a></b></li>
+  <li>
+  Run from cmd. Use chdir to set your directory and run the exe in passive mode:
+  <br>
+  chdir c:\GIS\demo
+  <br>
+  c:\GIS\demo>AccessDatabaseEngine_x64.exe /passive</li>
+  <li>
+  Locate the qgis.bat file (mine is in C:\OSGeo4W64\bin\qgis.bat for example). Add the following lines:
+  <br>
+  set OGR_SKIP=ODBC
+  <br>
+  set PGEO_DRIVER_TEMPLATE=DRIVER=Microsoft Access Driver (*.mdb, *.accdb);DBQ=%%s</li>
 </section>
 
-<section style="text-align:center;padding:.35em;font-size:1000%;">
-  2
+<section style="text-align:center;padding-top:2em;font-size:300%">
+  Projections and Coordinate System
 </section>
 
-<section style="text-align:center;padding:.35em;font-size:1000%;">
-  1
+<section style="padding:2em 9em;">
+  <h1 style="text-align:center;font-size:100%">Change the Coordinate System</h1>
+  <p>
+  <ol>
+  <li>Right click on your layer > Save as</li>
+  <br>
+  <li>Choose a Format and a location</li>
+  <br>
+  <li>Under CRS > search for State Plane California V Feet (EPSG: 102645)</li>
 </section>
 
-<section id="follow" style="padding-top:5em;background:url(sky.jpg);background-size:cover;">
-  <p style="text-align:center;color:#000;font-size:200%;line-height:1.35em;">INSPIRATIONAL IMAGE<br>ACCOMPANIED BY<br>INSIGHTFUL COMMENTARY
-  <p id="follow-anchor" style="position:fixed;text-indent:-1.25em;">&larr; When this bar reaches the top,<br>the next slide will fade in.
-</section>
-
-<section style="text-align:center;padding-top:5em;">
-  <p>If you resize the window,
-    <br>slide content will scale up or down
-    <br>to fit automatically.
-</section>
-
-<section id="lorenz" style="text-align:center;padding-top:0;">
-  <canvas></canvas>
-  <p style="position:absolute;z-index:1;padding-top:5em;left:0;width:100%;text-shadow:0 1px 0 #000;">Use <i>activate</i> and <i>deactivate</i> events
-    <br>to enable complex animations
-    <br>only when visible.
+<section style="padding:2em 9em;">
+  <h1 style="text-align:center;font-size:100%">Make a Map</h1>
+  <p>
+  <ol>
+  <li>Go to Project > New Print Composer</li>
+  <br>
+  <li>Pick a title</li>
+  <br>
+  <li>Go to Layout > Add Map, draw your map square</li>
+  <br>
+  <li>Under Item Properties, set your scale and extents</li>
+  <br>
+  <li>Under Layout, add legend, scale, text, graphics</li>
 </section>
 
 <section style="padding:5em 13em;">
